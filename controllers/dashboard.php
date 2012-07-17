@@ -1,13 +1,17 @@
 <?php
 
 class Dashboard extends Controller {
+    
+    public function __construct() {
+        parent::__construct();
+    }
 
     public function index() {
-       echo 'This is Dashboard';
+       $this->load->view('Dashboard');
     }
 
     public function newPage() {
-        
+        echo 'new page form here';
     }
 
     public function editPage() {
