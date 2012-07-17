@@ -10,7 +10,14 @@
 		}
 		
 		public function auth(){
-			
+			$username=$_POST['usr'];
+			$password=$_POST['passwd'];
+			$valid=$this->load->model('user')->auth($username,$password);
+			if($valid){
+				header('location: ../dashboard.php');
+			}else{
+				header('location: ../login.php');
+			}
 		}
 		
 		

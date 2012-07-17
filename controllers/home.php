@@ -7,7 +7,7 @@
     	
 		public function __construct(){
 			parent::__construct();
-			
+			echo md5('asdqwe123');
 		}
 		
 		public function index(){
