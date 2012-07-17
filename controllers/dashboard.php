@@ -1,24 +1,25 @@
 <?php
-    
-    class Dashboard extends Controller{
-    	
-    	public function index(){
-    		$this->load->view('Dashboard');
-    	}
-		
-		public function newPage(){
-			
-		}
-		
-		public function editPage(){
-			
-		}
-		
-		public function savePage(){
-			
-		}
-		
-		public function deletePage(){
-			
-		}
+
+class Dashboard extends Controller {
+
+    public function index() {
+       echo 'This is Dashboard';
     }
+
+    public function newPage() {
+        
+    }
+
+    public function editPage() {
+        
+    }
+
+    public function savePage() {
+        
+    }
+
+    public function deletePage() {
+        
+    }
+
+}

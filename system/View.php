@@ -3,7 +3,7 @@
 /**
  * @author satriaprayoga
  */
-abstract class View {
+class View {
 	
 	private $values=array();
 	private $output='';
@@ -41,5 +41,5 @@ abstract class View {
 		echo $out;
 	}
 	
-	public abstract function configureTemplate($temp_files);
+	public function configureTemplate($temp_files){}
 }
