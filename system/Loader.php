@@ -8,12 +8,12 @@ class Loader {
         if (is_readable($file)) {
             require($file);
             $view = $name . 'View';
-            $view = new $view();
+            $view = new view();
             if (isset($vars)) {
                 extract($vars);
-                $view->render($vars);
+                $view->render($name,$vars);
             } else {
-                $view->render(null);
+                $view->render($name,null);
             }
             return true;
         }

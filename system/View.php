@@ -5,6 +5,25 @@
  */
 class View {
 	
+       
+    
+        public function __construct() {
+           $this->template_files=array();
+           $this->template_files['header']='';
+           $this->template_files['footer']='';
+        }
+        
+        public function render($name,$data=array()){
+            $filename=SITE_PATH.'views/'.$name.'.php';
+            if(file_exists($filename)){
+                  $this->data=$data;
+                  if(!empty($this->template_files['header'])) require $this->template_files['header'];
+                  require $filename;
+                   if(!empty($this->template_files['footer'])) require $this->template_files['footer'];
+            }
+          
+        }
+    /*
 	private $values=array();
 	private $output='';
 	protected $temp_files=array();
@@ -42,4 +61,6 @@ class View {
 	}
 	
 	public function configureTemplate($temp_files){}
+     * 
+     */
 }

@@ -143,9 +143,10 @@ and open the template in the editor.
                     </p>
 
                 </form>
+                
             </div>
+          
         </div>
-        <div id="dummy"></div>
-        <div id="dummy2"></div>
+        
     </body>
 </html>
