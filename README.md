@@ -1,3 +1,3 @@
 Berlatih
 =============
-super simplify MVC Framework
+super simple MVC Framework
