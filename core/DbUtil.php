@@ -49,5 +49,23 @@ class DbUtil extends PDO {
         $stmt->execute(array(':id' => $id));
     }
 
+    public function select($sql, $array = array(), $fetchMode = PDO::FETCH_BOTH) {
+        $stmt = $this->prepare($sql);
+        foreach ($array as $key => $value) {
+            $stmt->bindValue("$key", $value);
+        }
+        $stmt->execute();
+        return $stmt->fetchAll($fetchMode);
+    }
+
+    public function single($sql, $array = array()) {
+        $stmt = $this->prepare($sql);
+        foreach ($array as $key => $value) {
+            $stmt->bindValue("$key", $value);
+        }
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
 }
 
