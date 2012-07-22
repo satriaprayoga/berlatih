@@ -1,2 +1,3 @@
-Trainning MVC
+Berlatih
 =============
+super simplify MVC Framework
