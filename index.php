@@ -6,6 +6,8 @@ define('TEMPLATE_DIR', SITE_PATH . 'template/');
 define('RESOURCE_DIR', SITE_PATH, 'public/');
 define('URL','http://localhost/berlatih/');
 
+
+
 require SITE_PATH . 'config/db.php';
 require SITE_PATH . 'config/admin.php';
 
