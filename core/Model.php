@@ -16,5 +16,3 @@ class Model {
         $this->db=new DbUtil(DB_TYPE, DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD);
     }
 }
-
-?>

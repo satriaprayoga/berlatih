@@ -28,14 +28,14 @@ class DbUtil extends PDO {
         $stmt->execute();
     }
 
-    public function update($table, $data, $where) {
+    public function update($table, $data, $selector) {
         ksort($data);
         $fieldDetails = NULL;
         foreach ($data as $key => $value) {
             $fieldDetails.="`$key`=:$key,";
         }
         $fieldDetails = rtrim($fieldDetails, ', ');
-        $query = "UPDATE $table SET $fieldDetails WHERE $where";
+        $query = "UPDATE $table SET $fieldDetails WHERE $selector";
         $stmt = $this->prepare($query);
         foreach ($data as $key => $value) {
             $stmt->bindValue(":$key", $value);

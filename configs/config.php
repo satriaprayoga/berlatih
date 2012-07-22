@@ -13,7 +13,10 @@
 define('DEFAULT_HOME', 'home');
 define('TEMPLATE_DIR', SITE_PATH . 'template/');
 define('URL','http://localhost/berlatih/');
-define('PUBLIC_DIR', URL, 'public/');
+define('PUBLIC_DIR', URL. 'public/');
+define('CSS_DIR',PUBLIC_DIR.'css/');
+define('JS_DIR',PUBLIC_DIR.'js/');
+define('IMG_DIR',PUBLIC_DIR.'images/');
 
 /**
  *database configuration 

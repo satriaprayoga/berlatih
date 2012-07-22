@@ -1,19 +1,15 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of error
+ * Default Error controller. this controller will be invoked if some errors occure
  *
  * @author satriaprayoga
  */
 class Error extends Controller{
     //put your code here
     public function index() {
-        echo 'this is error';
+       $this->view->message='This is Error Page';
+       $this->view->render('404');
     }
 }
 

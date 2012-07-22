@@ -1,12 +1,6 @@
 <?php
-
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of home
+ * Default home controller
  *
  * @author satriaprayoga
  */
@@ -17,7 +11,8 @@ class Home extends Controller {
     }
     
     public function index() {
-        echo 'This is home';
+        $this->view->message='This is home';
+        $this->view->render('home');
     }
 }
 
